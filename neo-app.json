@@ -1,0 +1,51 @@
+{
+  "welcomeFile": "index.html",
+  "routes": [
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "S4development",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "S4development"
+    },
+    {
+      "path": "/sap/bc/ui5_ui5",
+      "target": {
+        "type": "destination",
+        "name": "S4development",
+        "entryPath": "/sap/bc/ui5_ui5"
+      },
+      "description": "S4development"
+    },
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/resources/i2d/pp/mrpcockpit/reuse/s1",
+      "target": {
+        "type": "destination",
+        "name": "S4development",
+        "entryPath": "/sap/bc/ui5_ui5/sap/pp_mrp_reuses1",
+        "preferLocal": true
+      },
+      "description": "i2d/pp/mrpcockpit/reuse/s1 Reuse Library"
+    }
+  ]
+}

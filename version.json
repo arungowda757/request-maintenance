@@ -1,0 +1,8 @@
+{ "application": "i2d.pp.prdorderissue.monitor.s1",
+  "version": "7.0.2",
+  "buildNumber": "27",
+  "buildId": "27",
+  "branch": "detached",
+  "revision": "8fe350f3370d2f26a051b6c208031c0d354a90c5",
+  "GitURL": ""
+}

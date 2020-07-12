@@ -1,0 +1,4 @@
+/*
+ * Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+ */
+sap.ui.define(["sap/ui/core/util/MockServer"],function(M){"use strict";var m,_="i2d/pp/prdorderissue/monitor/s1/",a=_+"localService/mockdata";return{init:function(e){var u=jQuery.sap.getUriParameters(),j=jQuery.sap.getModulePath(a),s=jQuery.sap.getModulePath(_+"manifest",".json"),o=jQuery.sap.syncGetJSON(s).data,b=o["sap.app"].dataSources.PP_MRP_COCKPIT_SRV,c=jQuery.sap.getModulePath(_+b.settings.localUri.replace(".xml",""),".xml"),d=/.*\/$/.test(b.uri)?b.uri:b.uri+"/";m=new M({rootUri:d});M.config({autoRespond:true,autoRespondAfter:(u.get("serverDelay")||1000)});m.simulate(c,{sMockdataBaseUrl:j,bGenerateMissingMockData:true,aEntitySetsNames:e});m.start();jQuery.sap.log.info("Running the app with mock data");},_adjustResponse:function(x){if(x.status===504){x.status="504 Gateway Timeout";}},getMockServer:function(){return m;}};});
